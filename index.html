@@ -83,8 +83,8 @@
 <div class="controls">
   <div class="controls-inner">
     <div class="btn-group">
-      <button class="btn active" id="view-teams" onclick="setView('teams')">By Team</button>
-      <button class="btn" id="view-day" onclick="setView('day')">By Day</button>
+      <button class="btn active" id="view-day" onclick="setView('day')">By Day</button>
+      <button class="btn" id="view-teams" onclick="setView('teams')">By Team</button>
     </div>
     <div class="divider"></div>
     <div class="btn-group">
@@ -164,7 +164,7 @@ const TEAMS=[
   ]},
 ];
 
-let currentView='teams',currentGender='All',currentAge='All';
+let currentView='day',currentGender='All',currentAge='All';
 function isSDSY(n){return n&&(n.startsWith('Cardiff Sockers')||n.startsWith('SDSY'));}
 function dayClass(d){return d==='Sat'?'day-sat':'day-sun';}
 function setView(v){currentView=v;document.getElementById('view-teams').className=v==='teams'?'btn active':'btn';document.getElementById('view-day').className=v==='day'?'btn active':'btn';render();}
